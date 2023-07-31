@@ -11,6 +11,7 @@
 		396692682A7776910013AB33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396692672A7776910013AB33 /* ContentView.swift */; };
 		3966926A2A7776920013AB33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 396692692A7776920013AB33 /* Assets.xcassets */; };
 		3966926D2A7776920013AB33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3966926C2A7776920013AB33 /* Preview Assets.xcassets */; };
+		AAA490AC2A78173100A6BA1B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA490AB2A78173100A6BA1B /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		396692672A7776910013AB33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		396692692A7776920013AB33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3966926C2A7776920013AB33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAA490AB2A78173100A6BA1B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		396692642A7776910013AB33 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				AAA490AA2A78170F00A6BA1B /* Extensions */,
 				396692652A7776910013AB33 /* CryptoApp.swift */,
 				396692672A7776910013AB33 /* ContentView.swift */,
 				396692692A7776920013AB33 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				3966926C2A7776920013AB33 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAA490AA2A78170F00A6BA1B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AAA490AB2A78173100A6BA1B /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				396692682A7776910013AB33 /* ContentView.swift in Sources */,
 				396692662A7776910013AB33 /* CryptoApp.swift in Sources */,
+				AAA490AC2A78173100A6BA1B /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
