@@ -26,7 +26,7 @@ class CoinDataService {
             .decode(type: [Coin].self, decoder: JSONDecoder())
             .sink(receiveCompletion: NetworkManager.handleCompletion, receiveValue: { [weak self] (returnedCoins) in
                 self?.allCoinList = returnedCoins
-                 self?.coinSubscription?.cancel()
+                self?.coinSubscription?.cancel()
              })
         
     }
