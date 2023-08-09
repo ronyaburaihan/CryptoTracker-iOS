@@ -13,7 +13,7 @@ struct CrossButton: View {
     
     var body: some View {
         Button (action: {
-            presentationMode.wrappedValue.dismiss()
+            self.presentationMode.wrappedValue.dismiss()
         }, label: {
             Image (systemName: "xmark")
         })
