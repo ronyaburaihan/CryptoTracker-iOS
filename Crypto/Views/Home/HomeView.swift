@@ -13,6 +13,9 @@ struct HomeView: View {
     @State private var showPortfolio: Bool = false  // animate right
     @State private var showPortfolioView: Bool = false // new sheet
     
+    @State private var selectedCoin: Coin? = nil
+    @State private var showDetailView: Bool = false
+    
     var body: some View {
         ZStack {
             
@@ -47,6 +50,13 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
         }
+        .background(
+            NavigationLink(
+                destination: DetailLoadingView(coin: $selectedCoin),
+                isActive: $showDetailView,
+                label: { EmptyView() }
+            )
+        )
     }
 }
 
@@ -98,10 +108,18 @@ extension HomeView {
             ForEach(viewModel.coinList) { coin in
                 CoinItemView(coin: coin, showHoldingColumn: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .onTapGesture {
+                        sague(coin: coin)
+                    }
             
             }
         }
         .listStyle(PlainListStyle())
+    }
+    
+    private func sague(coin: Coin) {
+        selectedCoin = coin
+        showDetailView.toggle()
     }
     
     private var portfolioCoinList: some View {
@@ -109,6 +127,9 @@ extension HomeView {
             ForEach(viewModel.portfolioCoins) { coin in
                 CoinItemView(coin: coin, showHoldingColumn: showPortfolio)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .onTapGesture {
+                        sague(coin: coin)
+                    }
             
             }
         }
@@ -127,8 +148,8 @@ extension HomeView {
                 viewModel.sortOption =  viewModel.sortOption == .rank ? .rankReversed : .rank
             }
             
-            
             Spacer()
+            
             if showPortfolio {
                 HStack(spacing: 4) {
                     Text("Holding")
