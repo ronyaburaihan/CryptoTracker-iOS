@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39367D772A8492CF00911D7F /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39367D762A8492CF00911D7F /* HapticManager.swift */; };
 		3963E1F22A78B24E00F5CC20 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E1F12A78B24E00F5CC20 /* Coin.swift */; };
 		3963E1F42A78C19A00F5CC20 /* CoinItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E1F32A78C19900F5CC20 /* CoinItemView.swift */; };
 		3963E1F62A78C3A400F5CC20 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963E1F52A78C3A400F5CC20 /* PreviewProvider.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39367D762A8492CF00911D7F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		3963E1F12A78B24E00F5CC20 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		3963E1F32A78C19900F5CC20 /* CoinItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinItemView.swift; sourceTree = "<group>"; };
 		3963E1F52A78C3A400F5CC20 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				39F7FDA42A7A558700343E4E /* NetworkManager.swift */,
 				399004F22A7CB29E0006D08F /* LocalFileManager.swift */,
+				39367D762A8492CF00911D7F /* HapticManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				399202D92A78AE2D0059C54D /* CircleButtonAnimation.swift in Sources */,
 				AAA490AC2A78173100A6BA1B /* Color.swift in Sources */,
 				3963E1F62A78C3A400F5CC20 /* PreviewProvider.swift in Sources */,
+				39367D772A8492CF00911D7F /* HapticManager.swift in Sources */,
 				3963E1F82A78C79500F5CC20 /* Double.swift in Sources */,
 				39F7FDA92A7A5F5300343E4E /* CoinImageService.swift in Sources */,
 				399004F52A7CCE3E0006D08F /* SearchBarView.swift in Sources */,

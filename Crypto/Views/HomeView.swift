@@ -117,13 +117,50 @@ extension HomeView {
     
     private var columnTitles: some View {
         HStack {
-            Text("Coin")
+            HStack(spacing: 4) {
+                Text("Coin")
+                Image(systemName: "chevron.down")
+                    .opacity((viewModel.sortOption == .rank || viewModel.sortOption == .rankReversed) ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: viewModel.sortOption == .rank ? 0 : 180))
+            }
+            .onTapGesture {
+                viewModel.sortOption =  viewModel.sortOption == .rank ? .rankReversed : .rank
+            }
+            
+            
             Spacer()
             if showPortfolio {
-                Text("Holding")
+                HStack(spacing: 4) {
+                    Text("Holding")
+                    Image(systemName: "chevron.down")
+                        .opacity((viewModel.sortOption == .holdings || viewModel.sortOption == .holdingReversed) ? 1.0 : 0.0)
+                        .rotationEffect(Angle(degrees: viewModel.sortOption == .holdings ? 0 : 180))
+                }
+                .onTapGesture {
+                    viewModel.sortOption =  viewModel.sortOption == .holdings ? .holdingReversed : .holdings
+                }
             }
-            Text("Price")
-                .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            
+            HStack(spacing: 4) {
+                Text("Price")
+                Image(systemName: "chevron.down")
+                    .opacity((viewModel.sortOption == .price || viewModel.sortOption == .priceReversed) ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: viewModel.sortOption == .price ? 0 : 180))
+            }
+            .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            .onTapGesture {
+                viewModel.sortOption =  viewModel.sortOption == .price ? .priceReversed : .price
+            }
+            
+            Button {
+                withAnimation(.linear(duration: 2.0)) {
+                    viewModel.reloadData()
+                }
+            } label: {
+                Image(systemName: "goforward")
+            }
+            .rotationEffect(Angle(degrees: viewModel.isLoading ? 360: 0), anchor: .center)
+
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
