@@ -15,17 +15,25 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                cryptoTrackerSection
-                 coinGeckoSection
-            }
-            .font(.headline)
-            .accentColor(.blue)
-            .listStyle(GroupedListStyle())
-            .navigationTitle("Settings")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    CrossButton()
+            ZStack {
+                // background
+                Color.theme.background.ignoresSafeArea()
+                
+                // content
+                List {
+                    cryptoTrackerSection
+                        .listRowBackground(Color.clear)
+                     coinGeckoSection
+                        .listRowBackground(Color.clear)
+                }
+                .font(.headline)
+                .accentColor(.blue)
+                .listStyle(GroupedListStyle())
+                .navigationTitle("Settings")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        CrossButton()
+                    }
                 }
             }
         }

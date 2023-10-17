@@ -24,6 +24,7 @@ class CoinDataService {
         
         coinSubscription = NetworkManager.loadDataFromAPI(url: url)
             .decode(type: [Coin].self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: NetworkManager.handleCompletion, receiveValue: { [weak self] (returnedCoins) in
                 self?.allCoinList = returnedCoins
                 self?.coinSubscription?.cancel()

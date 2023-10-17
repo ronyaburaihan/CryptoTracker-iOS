@@ -52,7 +52,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		39267E992ADE444F000B3B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		39267E9B2ADE4496000B3B63 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39267E9D2ADE5BC4000B3B63 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		39367D762A8492CF00911D7F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
@@ -168,7 +167,6 @@
 		396692642A7776910013AB33 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				39267E992ADE444F000B3B63 /* Info.plist */,
 				39F7FDA32A7A552600343E4E /* Utilities */,
 				398C584D2A790AE100C44D06 /* Services */,
 				3963E1F02A78B23C00F5CC20 /* Models */,
